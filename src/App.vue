@@ -1,11 +1,12 @@
 <template>
     <div id="demo" :class="[{'collapsed' : collapsed}]">
-        <sidebar-menu :menu="menu"
+      <div class="demo">
+        <sidebar-menu :menu="menu" class="sidebar"
         :collapsed="collapsed"
         :theme="selectedTheme"
         :show-one-child="true"
         @collapse="onCollapse"
-        @item-click="onItemClick"><span slot="dropdown-icon"><img src="./assets/rightarrow.png" width="10px" height="10px"/></span></sidebar-menu>
+        @item-click="onItemClick"/>
         <img src="./assets/KIT.png" class="imgHeader"/>
         <div class="selTheme">
           Select theme:
@@ -20,6 +21,7 @@
         </div>
         <div><h3>{{ msg }}</h3></div>
         <router-view />
+      </div>
     </div>
 </template>
 
@@ -162,6 +164,7 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css');
 body,
 html {
   margin: 0;
@@ -174,15 +177,17 @@ body {
 }
 
 #demo {
-  padding-left: 350px;
   text-align: center;
+}
+.sidebar{
+  text-align: left;
 }
 #demo.collapsed {
   padding-left: 50px;
 }
 
 .demo {
-  padding: 50px;
+  padding: 10px 10px 0 10px;
 }
 
 .container {
@@ -204,5 +209,13 @@ pre {
 
 .selTheme{
     margin-top: 10px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, td, th {
+  border: 1px solid black;
 }
 </style>
