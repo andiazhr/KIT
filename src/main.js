@@ -6,6 +6,8 @@ import VueRouter from 'vue-router'
 import VueSidebarMenu from 'vue-sidebar-menu'
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
 import Slider from '@jeremyhamm/vue-slider'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
 import Dashboard from './components/Dashboard.vue'
 // Bed Information
@@ -31,9 +33,12 @@ import PendapatanPercaraBayar from './components/pendapatan/PendapatanPercaraBay
 import PendapatanRealisasiKlaim from './components/pendapatan/PendapatanRealisasiKlaim.vue'
 import PendapatanRealisasiKlaimPiutang from './components/pendapatan/PendapatanRealisasiKlaimPiutang.vue'
 
+require('./assets/kit.css')
+
 Vue.use(Slider)
 Vue.use(VueRouter)
 Vue.use(VueSidebarMenu)
+Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = false
 

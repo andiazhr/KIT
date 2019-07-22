@@ -1,6 +1,7 @@
 <template>
     <div id="demo" :class="[{'collapsed' : collapsed}]">
       <div class="demo">
+        <div class="container">
         <sidebar-menu :menu="menu" class="sidebar"
         :collapsed="collapsed"
         :theme="selectedTheme"
@@ -21,6 +22,7 @@
         </div>
         <div><h3>{{ msg }}</h3></div>
         <router-view />
+      </div>
       </div>
     </div>
 </template>
@@ -183,7 +185,7 @@ body {
   text-align: left;
 }
 #demo.collapsed {
-  padding-left: 50px;
+  padding-left: 0;
 }
 
 .demo {
@@ -191,7 +193,9 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 1200px;
+  padding-bottom: 40px;
+  padding-left: 65px;
 }
 
 pre {

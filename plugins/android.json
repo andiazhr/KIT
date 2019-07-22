@@ -9,6 +9,9 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.andiazhr.vuecoba"
+    },
+    "cordova-plugin-sqlserver": {
+      "PACKAGE_NAME": "com.andiazhr.vuecoba"
     }
   },
   "dependent_plugins": {}
