@@ -14,15 +14,15 @@ export default {
     return {
       title: 'Dashboard',
       chartData: {
-        labels: ['null', 'BPJS', 'JAMKESDA', 'PERUSAHAAN', 'UMUM'],
+        labels: ['JAminan kesehatan', 'BPJS', 'JAMKESDA', 'PERUSAHAAN', 'UMUM'],
         datasets: [
           {
-            label: 'GitHub Commits',
+            label: 'JMLPAS',
             backgroundColor: '#f87979',
             data: [40, 20, 12, 39, 10]
           },
           {
-            label: 'GitHub unCommits',
+            label: 'JMLRJ',
             backgroundColor: '#3392FF',
             data: [40, 20, 12, 39, 10]
           }

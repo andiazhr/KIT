@@ -8,6 +8,7 @@ import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
 import Slider from '@jeremyhamm/vue-slider'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import numFormat from 'vue-filter-number-format'
 
 import Dashboard from './components/Dashboard.vue'
 // Bed Information
@@ -39,6 +40,7 @@ Vue.use(Slider)
 Vue.use(VueRouter)
 Vue.use(VueSidebarMenu)
 Vue.use(VueAxios, axios)
+Vue.filter('numFormat', numFormat)
 
 Vue.config.productionTip = false
 

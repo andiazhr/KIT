@@ -7,20 +7,22 @@
         <div class="kolom12 Border1" style="overflow-x:auto;">
         <table class="table table-border">
           <tr>
-            <th style="text-align:center; padding-right:5px; padding-left:5px">JENIS PASIEN</th>
-            <th style="text-align:center; padding-right:5px; padding-left:5px">TOTAL</th>
+            <th style="text-align:center; padding-right:5px; padding-left:5px">KODE GRUP</th>
+            <th style="text-align:center; padding-right:5px; padding-left:5px">NAMA GRUP</th>
+            <th style="text-align:center; padding-right:5px; padding-left:5px">JUMLAH BAYAR</th>
             <th style="text-align:center; padding-right:5px; padding-left:5px">TUNAI</th>
             <th style="text-align:center; padding-right:5px; padding-left:5px">KARTU KRIDIT</th>
             <th style="text-align:center; padding-right:5px; padding-left:5px">CEK/GIRO</th>
             <th style="text-align:center; padding-right:5px; padding-left:5px">DEPOSITE</th>
           </tr>
-          <tr>
-            <td style="text-align:left; padding-left: 5px;">Umum</td>
-            <td style="text-align:right; padding-right: 5px;">9</td>
-            <td style="text-align:right; padding-right: 5px;">0</td>
-            <td style="text-align:right; padding-right: 5px;">0</td>
-            <td style="text-align:right; padding-right: 5px;">0</td>
-            <td style="text-align:right; padding-right: 5px;">9</td>
+          <tr v-for="row in hasil" v-bind:key="row">
+            <td style="text-align:left; padding-left: 5px;">{{ row.KODEGTRFPT }}</td>
+            <td style="text-align:left; padding-left: 5px;">{{ row.NMGTRFPT }}</td>
+            <td style="text-align:right; padding-right: 5px;">{{ row.JMLBAYAR | numFormat }}</td>
+            <td style="text-align:right; padding-right: 5px;">{{ row.JMLTUNAI | numFormat}}</td>
+            <td style="text-align:right; padding-right: 5px;">{{ row.JMLKRTKRIDIT | numFormat }}</td>
+            <td style="text-align:right; padding-right: 5px;">{{ row.JMLCEKGIRO | numFormat }}</td>
+            <td style="text-align:right; padding-right: 5px;">{{ row.JMLDEPOSITE | numFormat}}</td>
           </tr>
         </table>
         </div>
@@ -28,6 +30,8 @@
 </template>
 
 <script>
+/* eslint-disable */
+const url = 'http://localhost/koneksi/pendapatanTunaiCB.php';// dokumen ada di API folder
 import BarChart from '@/components/Chart/Pendapatan/BarChart.vue'
 export default {
   components: {
@@ -35,8 +39,15 @@ export default {
   },
   data () {
     return {
-      title: 'Pendapatan Tunai Per Cara Bayar'
+      title: 'Pendapatan Tunai Per Cara Bayar',
+      hasil:[]
     }
+  },
+  mounted() {
+    this.axios.get(url).then((response) => {
+    console.log(response.data); 
+    this.hasil =response.data;
+    })
   }
 }
 </script>

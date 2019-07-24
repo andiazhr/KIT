@@ -16,6 +16,8 @@ box-sizing:border-box;
 .kolom11{width:91.66%;}
 .kolom12{width:100%;}
 .TopDash{margin-top:-35px}
+.maRight{margin-right: 8.333%};
+.maLeft{margin-left: 8.333%}
 
 [class*="kolom"]
 {
@@ -51,8 +53,11 @@ float :left;
 .kolom11-m{width:91.66%}
 .kolom12-m{width:100%}
 
+.maRight-m{margin-right: 0};
+.maLeft-m{margin-left: 0}
 .hidden-m{display: none;}
 .TopDash-m{margin-top:0}
+.Top-m{margin-top: 15px}
 }
 .judul{
 background-color: rgba(92, 91, 93, 1);

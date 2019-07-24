@@ -1,7 +1,7 @@
 <template>
     <div>
-      <div class="kolom12 judul3"><img src="@/assets/earth.png" width="20px" height="20px"/> Kunjungan Pasien</div>
-      <line-chart :data='chartData' :height="150" class='kolom12 kolom12-m chart chartBorder3'></line-chart>
+      <div class="kolom12 kolom12-m judul3 Top Top-m"><img src="@/assets/earth.png" width="20px" height="20px"/> Kunjungan Pasien</div>
+      <line-chart :data='chartData' :height="190" class='kolom12 kolom12-m chart chartBorder3'></line-chart>
     </div>
 </template>
 
