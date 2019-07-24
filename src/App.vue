@@ -134,12 +134,16 @@ export default {
               title: '4.1 Pendapatan Percara Bayar'
             },
             {
+              href: '/PendapatanTunai',
+              title: '4.3 Pendapatan Tunai'
+            },
+            {
               href: '/PendapatanRealisasiKlaim',
-              title: '4.2 Pendapatan Realisasi Klaim'
+              title: '4.3 Pendapatan Realisasi Klaim'
             },
             {
               href: '/PendapatanRealisasiKlaimPiutang',
-              title: '4.3 Pendapatan Realisasi Klaim & Piutang'
+              title: '4.4 Pendapatan Realisasi Klaim & Piutang'
             }
           ]
         }

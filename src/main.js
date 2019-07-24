@@ -31,6 +31,7 @@ import InfoAntrianFarmasi from './components/InfoAntrian/InfoAntrianFarmasi.vue'
 import InfoAntrianPoliklinik from './components/InfoAntrian/InfoAntrianPoliklinik.vue'
 // Pendapatan
 import PendapatanPercaraBayar from './components/pendapatan/PendapatanPercaraBayar.vue'
+import PendapatanTunai from './components/pendapatan/PendapatanTunai.vue'
 import PendapatanRealisasiKlaim from './components/pendapatan/PendapatanRealisasiKlaim.vue'
 import PendapatanRealisasiKlaimPiutang from './components/pendapatan/PendapatanRealisasiKlaimPiutang.vue'
 
@@ -130,6 +131,11 @@ const router = new VueRouter({
       path: '/PendapatanPercaraBayar',
       name: 'PendapatanPercaraBayar',
       component: PendapatanPercaraBayar
+    },
+    {
+      path: '/PendapatanTunai',
+      name: 'PendapatanTunai',
+      component: PendapatanTunai
     },
     {
       path: '/PendapatanRealisasiKlaim',

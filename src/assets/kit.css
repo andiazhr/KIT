@@ -16,8 +16,30 @@ box-sizing:border-box;
 .kolom11{width:91.66%;}
 .kolom12{width:100%;}
 .TopDash{margin-top:-35px}
-.maRight{margin-right: 8.333%};
-.maLeft{margin-left: 8.333%}
+.maRight{margin-right: 8.333%}
+.daLeft{margin-left: 5.66%}
+.maLeft{margin-left: 25%}
+.Top{margin-top: 25px;}
+.judul{
+background-color: rgba(92, 91, 93, 1);
+height: 35px;
+color: white;
+text-align: left;
+font-size: 15px;
+padding: 5px 0 0 10px;
+}
+.Border1{
+border-right: 1px solid rgba(92, 91, 93, 1);
+border-bottom: 1px solid rgba(92, 91, 93, 1);
+border-left: 1px solid rgba(92, 91, 93, 1);
+padding: 10px;
+}
+.chartBorder{
+border-right: 1px solid rgba(92, 91, 93, 1);
+border-bottom: 1px solid rgba(92, 91, 93, 1);
+border-left: 1px solid rgba(92, 91, 93, 1);
+padding-bottom: 15px;
+}
 
 [class*="kolom"]
 {
@@ -58,27 +80,6 @@ float :left;
 .hidden-m{display: none;}
 .TopDash-m{margin-top:0}
 .Top-m{margin-top: 15px}
-}
-.judul{
-background-color: rgba(92, 91, 93, 1);
-height: 35px;
-color: white;
-text-align: left;
-font-size: 15px;
-padding: 5px 0 0 10px;
-}
-.Border1{
-border-right: 1px solid rgba(92, 91, 93, 1);
-border-bottom: 1px solid rgba(92, 91, 93, 1);
-border-left: 1px solid rgba(92, 91, 93, 1);
-padding: 10px;
-}
-.chartBorder{
-border-right: 1px solid rgba(92, 91, 93, 1);
-border-bottom: 1px solid rgba(92, 91, 93, 1);
-border-left: 1px solid rgba(92, 91, 93, 1);
-padding-bottom: 15px;
-}
-.Top{
-    margin-top: 25px;
+.daLeft-m{margin-left: 0}
+.maLeft-m{margin-left: 0}
 }

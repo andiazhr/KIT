@@ -2,9 +2,9 @@
     <div>
         <div><h4>{{ title }}</h4></div>
         <div class="kolom12">
-        <div class="kolom6 kolom12-m judul1"><img src="@/assets/earth.png" width="20px" height="20px"/> 10 Besar ICD X Utama</div>
+        <div class="daLeft daLeft-m kolom5 kolom12-m judul1"><img src="@/assets/earth.png" width="20px" height="20px"/> 10 Besar ICD X Utama</div>
         <pie-chart />
-        <div class="kolom6 kolom12-m judul2 TopDash TopDash-m"><img src="@/assets/firstaid.png" width="20px" height="20px"/> Kunjungan Pasien Per Bagian</div>
+        <div class="daLeft daLeft-m kolom5 kolom12-m judul2 TopDash TopDash-m"><img src="@/assets/firstaid.png" width="20px" height="20px"/> Kunjungan Pasien Per Bagian</div>
         <bar-chart />
         <line-chart />
         </div>

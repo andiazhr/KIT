@@ -1,6 +1,6 @@
 <template>
     <div>
-    <pie-chart :data='chartData' class='kolom6 kolom12-m chart chartBorder1'  style="clear: left; float:left"></pie-chart>
+    <pie-chart :data='chartData' class='daLeft daLeft-m kolom5 kolom12-m chart chartBorder1'  style="clear: left; float:left"></pie-chart>
     </div>
 </template>
 
