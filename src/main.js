@@ -5,7 +5,7 @@ import App from './App'
 import VueRouter from 'vue-router'
 import VueSidebarMenu from 'vue-sidebar-menu'
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
-import Slider from '@jeremyhamm/vue-slider'
+import '@fortawesome/fontawesome-free/css/all.css'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import numFormat from 'vue-filter-number-format'
@@ -37,7 +37,6 @@ import PendapatanRealisasiKlaimPiutang from './components/pendapatan/PendapatanR
 
 require('./assets/kit.css')
 
-Vue.use(Slider)
 Vue.use(VueRouter)
 Vue.use(VueSidebarMenu)
 Vue.use(VueAxios, axios)

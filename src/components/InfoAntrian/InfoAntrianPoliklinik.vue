@@ -1,9 +1,9 @@
 <template>
     <div>
         <div><strong><h4 style="text-align:left">{{ title }}</h4></strong></div>
-        <div class="kolom12 judul"><img src="@/assets/firstaid.png" width="20px" height="20px"/> GRAFIK ANTRIAN POLIKLINIK </div>
+        <div class="kolom6 kolom12-m judul maLeft maLeft-m"><img src="@/assets/firstaid.png" width="20px" height="20px"/> GRAFIK ANTRIAN POLIKLINIK </div>
         <bar-chart />
-        <div class="kolom12 judul"><img src="@/assets/firstaid.png" width="20px" height="20px"/> INFO ANTRIAN POLI HARI INI Tanggal </div>
+        <div class="kolom12 judul Top"><img src="@/assets/firstaid.png" width="20px" height="20px"/> INFO ANTRIAN POLI HARI INI Tanggal </div>
         <div class="kolom12 Border1" style="overflow-x:auto;">
         <table class="table table-border">
           <tr>

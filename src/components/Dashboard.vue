@@ -4,7 +4,7 @@
         <div class="kolom12">
         <div class="daLeft daLeft-m kolom5 kolom12-m judul1"><img src="@/assets/earth.png" width="20px" height="20px"/> 10 Besar ICD X Utama</div>
         <pie-chart />
-        <div class="daLeft daLeft-m kolom5 kolom12-m judul2 TopDash TopDash-m"><img src="@/assets/firstaid.png" width="20px" height="20px"/> Kunjungan Pasien Per Bagian</div>
+        <div class="daLeft daLeft-m kolom5 kolom12-m judul2 TopDash TopDash-m Top-m"><img src="@/assets/firstaid.png" width="20px" height="20px"/> Kunjungan Pasien Per Bagian</div>
         <bar-chart />
         <line-chart />
         </div>

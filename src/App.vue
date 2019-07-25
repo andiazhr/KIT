@@ -41,7 +41,7 @@ export default {
         {
           href: '/',
           title: 'Dashboard',
-          icon: 'fa fa-bar-chart'
+          icon: 'fa fa-chart-area'
         },
         {
           href: '',
@@ -61,7 +61,7 @@ export default {
         {
           href: '',
           title: 'Rekam Medis',
-          icon: 'fa fa-list-ul',
+          icon: 'fa fa-file',
           child: [
             {
               href: '/BesarICDXUtama',
@@ -108,7 +108,7 @@ export default {
         {
           href: '',
           title: 'Info Antrian',
-          icon: 'fa fa-pencil-square',
+          icon: 'fa fa-pen-square',
           child: [
             {
               href: '/InfoAntrianIBS',
@@ -127,7 +127,7 @@ export default {
         {
           href: '',
           title: 'Pendapatan',
-          icon: 'fa fa-money',
+          icon: 'fa fa-money-bill-wave',
           child: [
             {
               href: '/PendapatanPercaraBayar',
@@ -169,7 +169,7 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css');
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css');
 body,
 html {
@@ -187,6 +187,7 @@ body {
 }
 .sidebar{
   text-align: left;
+  font-size: 10px !important;
 }
 #demo.collapsed {
   padding-left: 0;

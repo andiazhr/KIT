@@ -1,6 +1,6 @@
 <template>
     <div>
-      <bar-chart :data='chartData' class='kolom12 kolom12-m chart chartBorder'></bar-chart>
+      <bar-chart :data='chartData' class='kolom6 kolom12-m chart chartBorder maLeft maLeft-m'></bar-chart>
     </div>
 </template>
 

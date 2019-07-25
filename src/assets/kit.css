@@ -40,6 +40,7 @@ border-bottom: 1px solid rgba(92, 91, 93, 1);
 border-left: 1px solid rgba(92, 91, 93, 1);
 padding-bottom: 15px;
 }
+.clear{clear: left; float:left}
 
 [class*="kolom"]
 {

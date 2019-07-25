@@ -1,7 +1,7 @@
 <template>
     <div>
         <div><strong><h4 style="text-align:left">{{ title }}</h4></strong></div>
-        <div class="kolom12 kolom12-m judul"><img src="@/assets/earth.png" width="20px" height="20px"/> Grafik Laporan Pendapatan Tunai</div>
+        <div class="kolom6 kolom12-m judul maLeft maLeft-m"><img src="@/assets/earth.png" width="20px" height="20px"/> Grafik Laporan Pendapatan Tunai</div>
         <bar-chart />
         <div class="kolom12 judul Top"><img src="@/assets/firstaid.png" width="20px" height="20px"/> Detail Pendapatan Tunai</div>
         <div class="kolom12 Border1" style="overflow-x:auto;">
@@ -32,7 +32,7 @@
 <script>
 /* eslint-disable */
 const url = 'http://localhost/koneksi/pendapatanTunai.php';// dokumen ada di API folder
-import BarChart from '@/components/Chart/Pendapatan/BarChart.vue'
+import BarChart from '@/components/Chart/Pendapatan/BarChart2.vue'
 export default {
   components: {
     BarChart
