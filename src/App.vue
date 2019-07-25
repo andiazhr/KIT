@@ -1,7 +1,7 @@
 <template>
     <div id="demo" :class="[{'collapsed' : collapsed}]">
       <div class="demo">
-        <div class="container">
+        <div v-scroll="onScroll" class="container">
         <sidebar-menu :menu="menu" class="sidebar"
         :collapsed="collapsed"
         :theme="selectedTheme"

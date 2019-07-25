@@ -9,6 +9,7 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import numFormat from 'vue-filter-number-format'
+import vuescroll from 'vue-scroll'
 
 import Dashboard from './components/Dashboard.vue'
 // Bed Information
@@ -41,6 +42,7 @@ Vue.use(VueRouter)
 Vue.use(VueSidebarMenu)
 Vue.use(VueAxios, axios)
 Vue.filter('numFormat', numFormat)
+Vue.use(vuescroll)
 
 Vue.config.productionTip = false
 
