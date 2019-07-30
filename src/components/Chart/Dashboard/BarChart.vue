@@ -20,11 +20,6 @@ export default {
             label: 'JMLPAS',
             backgroundColor: '#f87979',
             data: [40, 20, 12, 39, 10]
-          },
-          {
-            label: 'JMLRJ',
-            backgroundColor: '#3392FF',
-            data: [40, 20, 12, 39, 10]
           }
         ]
       }

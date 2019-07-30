@@ -1,9 +1,9 @@
 <template>
     <div>
         <div><strong><h4 style="text-align:left">{{ title }}</h4></strong></div>
-        <div class="kolom6 kolom12-m judul maLeft maLeft-m"><img src="@/assets/firstaid.png" width="20px" height="20px"/> GRAFIK ANTRIAN FARMASI</div>
+        <div class="kolom6 kolom12-m judul maLeft maLeft-m"><i class="fa fa-chart-bar"></i> GRAFIK ANTRIAN FARMASI</div>
         <bar-chart />
-        <div class="kolom12 judul Top"><img src="@/assets/firstaid.png" width="20px" height="20px"/> INFO ANTRIAN FARMASI HARI INI Tanggal </div>
+        <div class="kolom12 judul Top"><i class="fa fa-table"></i> INFO ANTRIAN FARMASI HARI INI Tanggal {{new Date() | dateFormat('DD-MM-YYYY')}} </div>
         <div class="kolom12 Border1" style="overflow-x:auto;">
         <table class="table table-border">
           <tr>

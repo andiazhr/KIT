@@ -40,6 +40,13 @@ border-bottom: 1px solid rgba(92, 91, 93, 1);
 border-left: 1px solid rgba(92, 91, 93, 1);
 padding-bottom: 15px;
 }
+
+.dateBorder{
+border-right: 1px solid rgba(92, 91, 93, 1);
+border-left: 1px solid rgba(92, 91, 93, 1);
+padding-bottom: 5px;
+}
+.TopDate{margin-top: 10px;}
 .clear{clear: left; float:left}
 
 [class*="kolom"]

@@ -10,6 +10,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import numFormat from 'vue-filter-number-format'
 import vuescroll from 'vue-scroll'
+import VueFilterDateFormat from 'vue-filter-date-format'
 
 import Dashboard from './components/Dashboard.vue'
 // Bed Information
@@ -43,6 +44,7 @@ Vue.use(VueSidebarMenu)
 Vue.use(VueAxios, axios)
 Vue.filter('numFormat', numFormat)
 Vue.use(vuescroll)
+Vue.use(VueFilterDateFormat)
 
 Vue.config.productionTip = false
 

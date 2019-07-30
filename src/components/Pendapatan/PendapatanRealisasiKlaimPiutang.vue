@@ -1,9 +1,9 @@
 <template>
     <div>
         <div><strong><h4 style="text-align:left">{{ title }}</h4></strong></div>
-        <div class="kolom6 kolom12-m judul maLeft maLeft-m"><img src="@/assets/earth.png" width="20px" height="20px"/> Grafik Laporan Pendapatan Realisasi Klaim & Piutang</div>
+        <div class="kolom6 kolom12-m judul maLeft maLeft-m"><i class="fa fa-chart-bar"></i> Grafik Laporan Pendapatan Realisasi Klaim & Piutang</div>
         <bar-chart />
-        <div class="kolom12 judul Top"><img src="@/assets/firstaid.png" width="20px" height="20px"/> Detail Pendapatan Realisasi Klaim</div>
+        <div class="kolom12 judul Top"><i class="fa fa-table"></i> Detail Pendapatan Realisasi Klaim</div>
         <div class="kolom12 Border1" style="overflow-x:auto;">
         <table class="table table-border">
           <tr>
