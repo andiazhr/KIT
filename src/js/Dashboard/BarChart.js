@@ -1,10 +1,28 @@
-import { Bar } from 'vue-chartjs'
+import {
+  Bar,
+  mixins
+} from 'vue-chartjs'
+
 export default {
   extends: Bar,
-  props: ['data', 'options'],
+  props: ['chartData'],
+  mixins: [mixins.reactiveProp],
+  data () {
+    return {
+      options: {
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    }
+  },
   mounted () {
-    // this.chartData is created in the mixin.
-    // If you want to pass options please create a local options object
-    this.renderChart(this.data, this.options)
+    this.renderChart({
+      labels: this.chartData.map(entry => entry.NMPOLI),
+      datasets: [{
+        label: 'Jumlah Pasien',
+        backgroundColor: '#00A4FF',
+        data: this.chartData.map(entry => entry.JMLPAS)
+      }]
+    }, this.options)
   }
 }

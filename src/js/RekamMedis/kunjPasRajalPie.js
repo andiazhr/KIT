@@ -24,15 +24,15 @@ export default {
       },
       {
         label: 'Jumlah Gawat Darurat',
-        data: this.chartData.map(entry => entry.JMLRJ)
-      },
-      {
-        label: 'Jumlah Rawat Inap',
         data: this.chartData.map(entry => entry.JMLGD)
       },
       {
+        label: 'Jumlah Rawat Inap',
+        data: this.chartData.map(entry => entry.JMLRI)
+      },
+      {
         label: 'Jumlah Rawat Jalan',
-        data: this.chartData.map(entry => entry.JMLLRI)
+        data: this.chartData.map(entry => entry.JMLRJ)
       }]
     }, this.options)
   }

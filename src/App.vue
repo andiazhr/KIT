@@ -21,22 +21,34 @@
           </select>
         </div>
         <div><h3>{{ msg }}</h3></div>
-        <router-view />
+        <router-link v-if="authenticated" to="/login" v-on:click.native="logout()" replace>Logout</router-link>
+        <router-view @authenticated="setAuthenticated" />
       </div>
       </div>
     </div>
 </template>
 
 <script>
+/* eslint-disable */
 export default {
   name: 'App',
   data () {
     return {
+      authenticated: false,
+                mockAccount: {
+                    username: "123",
+                    password: "123"
+                },
       msg: 'Welcome To Dashboard Krakatau Information Technology',
       menu: [
         {
           header: true,
           title: 'Krakatau Information Technology'
+        },
+        {
+          href: '/Login',
+          title: 'Login',
+          icon: 'fa fa-sign-out-alt'
         },
         {
           href: '/',
@@ -81,27 +93,31 @@ export default {
             },
             {
               href: '/KunjunganPasienRawatJalanPerJenisPasien',
-              title: '2.5 Kunjungan Pasien Rawat Jalan Per Jenis Pasien'
+              title: '2.5 Kunj Pasien Rawat Jalan Per Jenis Pasien'
             },
             {
               href: '/KunjunganPasienRawatJalanPerSMF',
-              title: '2.6 Kunjungan Pasien Rawat Jalan Per SMF'
+              title: '2.6 Kunj Pasien Rawat Jalan Per SMF'
             },
             {
               href: '/KunjunganPasienRawatJalanPerPoli',
-              title: '2.7 Kunjungan Pasien Rawat Jalan Per Poli'
+              title: '2.7 Kunj Pasien Rawat Jalan Per Poli'
+            },
+            {
+              href: '/Pengunjung',
+              title: '2.8 Pengunjung'
             },
             {
               href: '/SensusRanapKelas',
-              title: '2.8 Sensus Ranap Kelas'
+              title: '2.9 Sensus Ranap Kelas'
             },
             {
               href: '/SensusRanapUnit',
-              title: '2.9 Sensus Ranap Unit'
+              title: '2.10 Sensus Ranap Unit'
             },
             {
               href: '/BORLOSTOI',
-              title: '2.10 BOR, LOS, TOI'
+              title: '2.11 BOR, LOS, TOI'
             }
           ]
         },
@@ -162,6 +178,29 @@ export default {
       console.log('onItemClick')
       // console.log(event)
       // console.log(item)
+    },
+    onScroll: function(e, position) {
+      this.position = position;
+    },
+    setAuthenticated(status) {
+                this.authenticated = status;
+            },
+            logout() {
+                this.authenticated = false;
+            }
+    // logout(){
+    //   localStorage.removeItem('login');
+    //   location.reload();
+    // }
+  },
+  mounted() {
+            if(!this.authenticated) {
+                this.$router.push('/');
+            }
+        },
+  computed: {
+    greeting(){
+      return 'Welcome' + this.$store.state.username;
     }
   }
 }
@@ -171,6 +210,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css');
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css');
+@import url('//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons');
 body,
 html {
   margin: 0;
@@ -179,7 +219,7 @@ html {
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: #f2f4f7;
+  background-color: #fff;
 }
 
 #demo {

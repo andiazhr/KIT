@@ -1,26 +1,34 @@
 import {
-  Doughnut,
-  mixins
+  Doughnut
 } from 'vue-chartjs'
 
 export default {
   extends: Doughnut,
-  mixins: [mixins.reactiveProp],
-  data () {
-    return {
-      options: {
-        responsive: true,
-        maintainAspectRatio: false
-      }
+  props: ['data', 'options'],
+  mounted () {
+    this.renderDoughnutChart()
+  },
+  computed: {
+    chartData: function () {
+      return this.data
     }
   },
-  mounted () {
-    this.renderChart({
-      labels: this.chartData.map(entry => entry.KODEBAGIAN),
-      datasets: [{
-        backgroundColor: '#f87979',
-        data: this.chartData.map(entry => entry.JMLPAS)
-      }]
-    }, this.options)
+  methods: {
+    renderDoughnutChart: function () {
+      this.renderChart({
+        labels: this.chartData.map(entry => entry.KODEBAGIAN),
+        datasets: [{
+          backgroundColor: ['#FF1700', '#FF4500', '#FF8300', '#FFB900', '#FCFF00', '#DDFF00', '#BAFF00', '#94FF00', '#56FF00', '#11FF00', '#00FF67', '#00FFB8', '#00FFF5', '#00D3FF', '#00A4FF', '#006EFF', '#0040FF', '#0500FF', '#4B00FF', '#8800FF', '#C600FF', '#EC00FF', '#FF00E7', '#FF1700', '#FF4500', '#FF8300', '#FFB900', '#FCFF00', '#DDFF00', '#BAFF00', '#94FF00', '#56FF00', '#11FF00', '#00FF67', '#00FFB8', '#00FFF5', '#00D3FF', '#00A4FF', '#006EFF', '#0040FF', '#0500FF', '#4B00FF', '#8800FF', '#C600FF', '#EC00FF', '#FF00E7', '#FF1700', '#FF4500', '#FF8300', '#FFB900', '#FCFF00', '#DDFF00', '#BAFF00', '#94FF00', '#56FF00', '#11FF00', '#00FF67', '#00FFB8', '#00FFF5', '#00D3FF', '#00A4FF', '#006EFF', '#0040FF', '#0500FF', '#4B00FF', '#8800FF', '#C600FF', '#EC00FF', '#FF00E7', '#FF1700', '#FF4500', '#FF8300', '#FFB900', '#FCFF00', '#DDFF00', '#BAFF00', '#94FF00', '#56FF00', '#11FF00', '#00FF67', '#00FFB8', '#00FFF5', '#00D3FF', '#00A4FF', '#006EFF', '#0040FF', '#0500FF', '#4B00FF', '#8800FF', '#C600FF', '#EC00FF', '#FF00E7'],
+          data: this.chartData.map(entry => entry.JMLPAS)
+        }]
+      }, { responsive: true, maintainAspectRatio: false }
+      )
+    }
+  },
+  watch: {
+    data: function () {
+      this.$data._chart.destroy()
+      this.renderDoughnutChart()
+    }
   }
 }

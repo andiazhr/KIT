@@ -6,12 +6,18 @@ import VueRouter from 'vue-router'
 import VueSidebarMenu from 'vue-sidebar-menu'
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
 import '@fortawesome/fontawesome-free/css/all.css'
+import 'vue-date-pick/dist/vueDatePick.css'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import numFormat from 'vue-filter-number-format'
 import vuescroll from 'vue-scroll'
 import VueFilterDateFormat from 'vue-filter-date-format'
+import vSelect from 'vue-select'
+import 'vue-select/dist/vue-select.css'
+import VueMaterial from 'vue-material'
 
+import Login from './components/Login.vue'
+import Logout from './components/Logout.vue'
 import Dashboard from './components/Dashboard.vue'
 // Bed Information
 import AvailabilityofBeds from './components/BedInformation/AvailabilityofBeds.vue'
@@ -24,6 +30,7 @@ import Tindakan from './components/RekamMedis/10Tindakan.vue'
 import KunjunganPasienRawatJalanPerJenisPasien from './components/RekamMedis/KunjunganPasienRawatJalanPerJenisPasien.vue'
 import KunjunganPasienRawatJalanPerSMF from './components/RekamMedis/KunjunganPasienRawatJalanPerSMF.vue'
 import KunjunganPasienRawatJalanPerPoli from './components/RekamMedis/KunjunganPasienRawatJalanPerPoli.vue'
+import Pengunjung from './components/RekamMedis/Pengunjung.vue'
 import SensusRanapKelas from './components/RekamMedis/SensusRanapKelas.vue'
 import SensusRanapUnit from './components/RekamMedis/SensusRanapUnit.vue'
 import BORLOSTOI from './components/RekamMedis/BORLOSTOI.vue'
@@ -45,11 +52,23 @@ Vue.use(VueAxios, axios)
 Vue.filter('numFormat', numFormat)
 Vue.use(vuescroll)
 Vue.use(VueFilterDateFormat)
+Vue.component('v-select', vSelect)
+Vue.use(VueMaterial)
 
 Vue.config.productionTip = false
 
 const router = new VueRouter({
   routes: [
+    {
+      path: '/Login',
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/Logout',
+      name: 'Logout',
+      component: Logout
+    },
     {
       path: '/',
       name: 'Dashboard',
@@ -99,6 +118,11 @@ const router = new VueRouter({
       path: '/KunjunganPasienRawatJalanPerPoli',
       name: 'KunjunganPasienRawatJalanPerPoli',
       component: KunjunganPasienRawatJalanPerPoli
+    },
+    {
+      path: '/Pengunjung',
+      name: 'Pengunjung',
+      component: Pengunjung
     },
     {
       path: '/SensusRanapKelas',

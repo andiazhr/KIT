@@ -1,39 +1,51 @@
 import {
-  Bar,
-  mixins
+  Bar
 } from 'vue-chartjs'
 
 export default {
   extends: Bar,
-  mixins: [mixins.reactiveProp],
-  data () {
-    return {
-      options: {
-        responsive: true,
-        maintainAspectRatio: false
-      }
+  props: ['data', 'options'],
+  mounted () {
+    this.renderBarChart()
+  },
+  computed: {
+    chartData: function () {
+      return this.data
     }
   },
-  mounted () {
-    this.renderChart({
-      labels: this.chartData.map(entry => entry.NMGTRFPT),
-      datasets: [{
-        label: 'Jumlah Pasien',
-        backgroundColor: '#f87979',
-        data: this.chartData.map(entry => entry.JMLPAS)
+  methods: {
+    renderBarChart: function () {
+      this.renderChart({
+        labels: this.chartData.map(entry => entry.NMGTRFPT),
+        datasets: [{
+          label: 'Gawat Darurat',
+          backgroundColor: '#FF9900',
+          data: this.chartData.map(entry => entry.JMLGD)
+        },
+        {
+          label: 'Rawat Inap',
+          backgroundColor: '#FFCC00',
+          data: this.chartData.map(entry => entry.JMLRI)
+        },
+        {
+          label: 'Rawat Jalan',
+          backgroundColor: '#FFFF00',
+          data: this.chartData.map(entry => entry.JMLRJ)
+        },
+        {
+          label: 'Jumlah Pasien',
+          backgroundColor: '#FF6600',
+          data: this.chartData.map(entry => entry.JMLPAS)
+        }]
       },
-      {
-        label: 'Jumlah Gawat Darurat',
-        data: this.chartData.map(entry => entry.JMLRJ)
-      },
-      {
-        label: 'Jumlah Rawat Inap',
-        data: this.chartData.map(entry => entry.JMLGD)
-      },
-      {
-        label: 'Jumlah Rawat Jalan',
-        data: this.chartData.map(entry => entry.JMLLRI)
-      }]
-    }, this.options)
+      { responsive: true, maintainAspectRatio: false }
+      )
+    }
+  },
+  watch: {
+    data: function () {
+      this.$data._chart.destroy()
+      this.renderBarChart()
+    }
   }
 }

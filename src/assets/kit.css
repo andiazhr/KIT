@@ -19,14 +19,17 @@ box-sizing:border-box;
 .maRight{margin-right: 8.333%}
 .daLeft{margin-left: 5.66%}
 .maLeft{margin-left: 25%}
+.logLeft{margin-left: 21%}
 .Top{margin-top: 25px;}
+.leftSelect{margin-left:29.33%;}
+.leftSelect2{margin-left:41.66%;}
 .judul{
 background-color: rgba(92, 91, 93, 1);
-height: 35px;
+height: auto;
 color: white;
 text-align: left;
 font-size: 15px;
-padding: 5px 0 0 10px;
+padding: 7px;
 }
 .Border1{
 border-right: 1px solid rgba(92, 91, 93, 1);
@@ -38,7 +41,7 @@ padding: 10px;
 border-right: 1px solid rgba(92, 91, 93, 1);
 border-bottom: 1px solid rgba(92, 91, 93, 1);
 border-left: 1px solid rgba(92, 91, 93, 1);
-padding-bottom: 15px;
+padding: 15px;
 }
 
 .dateBorder{
@@ -47,8 +50,9 @@ border-left: 1px solid rgba(92, 91, 93, 1);
 padding-bottom: 5px;
 }
 .TopDate{margin-top: 10px;}
+.LeftDate{margin-left: 10px;}
 .clear{clear: left; float:left}
-
+.select{margin-left: 32%;width: 200px; margin-top:7px}
 [class*="kolom"]
 {
 float :left;
@@ -90,4 +94,7 @@ float :left;
 .Top-m{margin-top: 15px}
 .daLeft-m{margin-left: 0}
 .maLeft-m{margin-left: 0}
+.logLeft-m{margin-left: 0}
+.select-m{margin-left: 28%; width: 150px; margin-top: 7px}
+.leftSelect-m{margin-left:17%}
 }

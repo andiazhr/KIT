@@ -68,10 +68,10 @@
 </template>
 
 <script>
-import BarChart from '@/components/Chart/RekamMedis/BarChart7.vue'
+/* eslint-disable */
 export default {
   components: {
-    BarChart
+    
   },
   data () {
     return {
